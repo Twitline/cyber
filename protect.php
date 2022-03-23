@@ -27,8 +27,10 @@ function protect($login,$mdp){
         return $nb==1;
     }
 }
+
 ?>
-<form method="post">
+
+<form method="post" action="PDO.php">
     <label for="login">Login</label>
     <input type="text" name="login" id="login"><br>
     <br>
@@ -38,6 +40,6 @@ function protect($login,$mdp){
 </form>
 <?php
 /* Crée une requête préparée */
-echo protect($_POST["login"], $_POST["mdp"]) ? "Authentifié" : "Nike ta mere sale espion";
+//echo protect($_POST["login"], $_POST["mdp"]) ? "Authentifié" : "Nike ta mere sale espion";
 
 ?>
